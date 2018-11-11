@@ -65,16 +65,16 @@ class CalendarDayAdapter extends ArrayAdapter<Date> {
             loadIcon(dayIcon, day);
         }
 
-        setLabelColors(dayLabel, day);
+        setLabelColors(view, day);
 
         dayLabel.setText(String.valueOf(day.get(Calendar.DAY_OF_MONTH)));
         return view;
     }
 
-    private void setLabelColors(TextView dayLabel, Calendar day) {
+    private void setLabelColors(View dayView, Calendar day) {
         // Setting not current month day color
         if (!isCurrentMonthDay(day)) {
-            DayColorsUtils.setDayColors(dayLabel, mCalendarProperties.getAnotherMonthsDaysLabelsColor(),
+            DayColorsUtils.setDayColors(dayView, mCalendarProperties.getAnotherMonthsDaysLabelsColor(),
                     Typeface.NORMAL, R.drawable.background_transparent);
             return;
         }
@@ -83,21 +83,21 @@ class CalendarDayAdapter extends ArrayAdapter<Date> {
         if (isSelectedDay(day)) {
             Stream.of(mCalendarPageAdapter.getSelectedDays())
                     .filter(selectedDay -> selectedDay.getCalendar().equals(day))
-                    .findFirst().ifPresent(selectedDay -> selectedDay.setView(dayLabel));
+                    .findFirst().ifPresent(selectedDay -> selectedDay.setView(dayView));
 
-            DayColorsUtils.setSelectedDayColors(dayLabel, mCalendarProperties);
+            DayColorsUtils.setSelectedDayColors(dayView, mCalendarProperties, day, mToday);
             return;
         }
 
         // Setting disabled days color
         if (!isActiveDay(day)) {
-            DayColorsUtils.setDayColors(dayLabel, mCalendarProperties.getDisabledDaysLabelsColor(),
+            DayColorsUtils.setDayColors(dayView, mCalendarProperties.getDisabledDaysLabelsColor(),
                     Typeface.NORMAL, R.drawable.background_transparent);
             return;
         }
 
         // Setting current month day color
-        DayColorsUtils.setCurrentMonthDayColors(day, mToday, dayLabel, mCalendarProperties);
+        DayColorsUtils.setCurrentMonthDayColors(day, mToday, dayView, mCalendarProperties);
     }
 
     private boolean isSelectedDay(Calendar day) {

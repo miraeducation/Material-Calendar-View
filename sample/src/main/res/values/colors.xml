@@ -9,4 +9,39 @@
     <color name="sampleLighter">#4CAF50</color>
 
     <color name="dialogAccent">#795548</color>
+
+
+    <!-- Official Pallete by Mira Design -->
+
+    <color name="design_navy">#004f6b</color>
+    <color name="design_orange">#f68a33</color>
+    <color name="design_soft_orange">#fef4eb</color>
+    <color name="design_dark_grey">#3e4953</color>
+    <color name="design_light_blue">#7ea7c6</color>
+    <color name="design_light_grey">#cfd9e2</color>
+    <color name="design_grey">#803e4953</color>
+    <color name="design_red">#b6494c</color>
+    <color name="design_red_alpha">#20b6494c</color>
+
+    <color name="design_yellow">#fab42c</color>
+    <color name="design_green">#267c77</color>
+    <color name="design_green_alpha">#20267c77</color>
+
+    <color name="design_transparent_black">#95000000</color>
+    <color name="design_transparent_40_black">#40000000</color>
+
+    <color name="design_bg_white">#f4f5f6</color>
+    <color name="design_white">#FFFFFF</color>
+    <color name="design_white_80">#80FFFFFF</color>
+    <color name="design_soft_light_blue">#D0E4F3</color>
+    <color name="design_black">#000000</color>
+    <color name="design_black_alpha30">#30000000</color>
+    <color name="design_black_alpha90">#90000000</color>
+
+    <color name="design_color_countdown_1">#8369af</color>
+    <color name="design_color_countdown_2">#ee6567</color>
+
+    <color name="design_grey_clear">#626a79</color>
+
+    <color name="design_orange_50_transparent">#50f68a33</color>
 </resources>

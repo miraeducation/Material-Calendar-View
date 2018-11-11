@@ -8,4 +8,7 @@
     <color name="itemHighlightColor">#1F000000</color>
 
     <color name="defaultColor">#2962FF</color>
+
+
+    <color name="calendar_orange_50_transparent">#50f68a33</color>
 </resources>

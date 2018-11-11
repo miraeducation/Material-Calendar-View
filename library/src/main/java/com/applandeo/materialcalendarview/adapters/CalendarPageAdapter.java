@@ -10,6 +10,7 @@ import com.applandeo.materialcalendarview.R;
 import com.applandeo.materialcalendarview.extensions.CalendarGridView;
 import com.applandeo.materialcalendarview.listeners.DayRowClickListener;
 import com.applandeo.materialcalendarview.utils.CalendarProperties;
+import com.applandeo.materialcalendarview.utils.DateUtils;
 import com.applandeo.materialcalendarview.utils.SelectedDay;
 
 import java.util.ArrayList;
@@ -33,6 +34,12 @@ public class CalendarPageAdapter extends PagerAdapter {
     private CalendarProperties mCalendarProperties;
 
     private int mPageMonth;
+
+    private Calendar today = DateUtils.getCalendar();
+
+    public Calendar getToday() {
+        return today;
+    }
 
     public CalendarPageAdapter(Context context, CalendarProperties calendarProperties) {
         mContext = context;
