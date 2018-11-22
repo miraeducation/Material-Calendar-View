@@ -28,8 +28,12 @@ public class DayColorsUtils {
      */
 
     public static void setDayColors(View view, int textColor, int typeface, int background) {
-        TextView textView = (TextView) view.findViewById(R.id.dayLabel);
+        if(view == null){
+            return;
+        }
+
         LinearLayout dayLayout = (LinearLayout) view.findViewById(R.id.dayLayout);
+        TextView textView = (TextView) view.findViewById(R.id.dayLabel);
 
         if (textView == null) {
             return;
